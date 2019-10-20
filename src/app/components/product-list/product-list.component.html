@@ -1,0 +1,23 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+    <h3> 
+        <a [title]="product.name + ' details'">
+            {{ product.name }}
+        </a>   
+    </h3>
+
+    <p *ngIf="product.description">
+        Description: {{ product.description}}
+    </p>
+
+    <p>The sum of 1 + 1 is {{ 1+1 }}</p>
+
+    <p>The sum of 1 + 1 is not {{ 1+1+ getVal() }}</p>
+
+    <app-product-alerts
+        [product]="product"></app-product-alerts>
+
+    <button (click)="share()">Share</button>
+
+</div>

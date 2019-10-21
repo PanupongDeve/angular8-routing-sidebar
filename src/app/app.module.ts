@@ -17,6 +17,7 @@ import { SidebarService }  from './services/globalVariable/sidebar/sidebar.servi
 import { MissionService } from './services/missionService/mission.service';
 import { MissionControlComponent } from './components/mission-control/mission-control.component';
 import { AstronautComponent } from './components/astronaut/astronaut.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AstronautComponent } from './components/astronaut/astronaut.component';
     CountdownTimerComponent,
     CountdownParentComponent,
     MissionControlComponent,
-    AstronautComponent
+    AstronautComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

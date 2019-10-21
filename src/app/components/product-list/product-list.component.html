@@ -16,7 +16,9 @@
     <p>The sum of 1 + 1 is not {{ 1+1+ getVal() }}</p>
 
     <app-product-alerts
-        [product]="product"></app-product-alerts>
+        [product]="product"
+        (notify)="onNotify()">
+    </app-product-alerts>
 
     <button (click)="share()">Share</button>
 

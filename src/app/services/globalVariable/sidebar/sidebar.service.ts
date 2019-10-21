@@ -6,6 +6,7 @@ import { SidebarType } from '../../../enums';
 @Injectable({
 	providedIn: 'root'
 })
+
 export class SidebarService {
 	private sideBarType: BehaviorSubject<SidebarType> = new BehaviorSubject<SidebarType>(SidebarType.SIDEBAR_1);
 

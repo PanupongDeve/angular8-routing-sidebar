@@ -34,12 +34,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     console.log('ngOnInit_app');
-    const sideBarTypeByRoute: SidebarType = this.handelCheckSideBarTypeByRoute();
-    this.sidebarService.setSideBarType(sideBarTypeByRoute);
-    this.handleSubscripeSidebar();
-    // setTimeout(() => {
-      
-    // }, 5)
+   
+    
+    setTimeout(() => {
+      this.handleSubscripeSidebar();
+    }, 5)
     
   }
 

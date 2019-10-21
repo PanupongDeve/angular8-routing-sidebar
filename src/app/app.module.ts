@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,12 +13,15 @@ import { VoterComponent } from './components/voter/voter.component';
 import { VoteTakerComponent } from './components/vote-taker/vote-taker.component';
 import { CountdownTimerComponent } from './components/countdown-timer/countdown-timer.component';
 import { CountdownParentComponent } from './components/countdown-parent/countdown-parent.component';
-
-import { SidebarService }  from './services/globalVariable/sidebar/sidebar.service';
-import { MissionService } from './services/missionService/mission.service';
 import { MissionControlComponent } from './components/mission-control/mission-control.component';
 import { AstronautComponent } from './components/astronaut/astronaut.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+
+import { SidebarService }  from './services/globalVariable/sidebar/sidebar.service';
+import { MissionService } from './services/missionService/mission.service';
+import { CartService } from './services/cartService/cart.service';
+import { CartComponent } from './components/cart/cart.component';
+import { ShippingComponent } from './components/shipping/shipping.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +36,16 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     CountdownParentComponent,
     MissionControlComponent,
     AstronautComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent,
+    ShippingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [SidebarService, MissionService],
+  providers: [SidebarService, MissionService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

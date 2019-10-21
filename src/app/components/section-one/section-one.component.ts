@@ -16,7 +16,8 @@ export class SectionOneComponent implements OnInit {
 
   ngOnInit() {
     console.log('ngOnInit_SectionOneComponent');
-    // this.sidebarService.setSideBarType(SidebarType.SIDEBAR_1);
+    this.sidebarService.setSideBarType(SidebarType.SIDEBAR_1);
+
   }
 
   onClick() {
